@@ -1,0 +1,116 @@
+/* Aqua-inspired panel. GNOME supplies the rest of the Shell theme. */
+#panel,
+#panel:overview,
+#panel.kiwi-panel-styled,
+#panel.kiwi-panel-styled:overview,
+#panel.kiwi-panel-fullscreen {
+  background-color: #f9f9fa !important;
+  background-image: url("pinstripes.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  border: none;
+  border-bottom: 1px solid #000000;
+  border-radius: 0;
+  box-shadow: none !important;
+  color: #101010 !important;
+  text-shadow: none;
+}
+
+/* Explicit descendants keep symbolic icons and extension labels legible
+ * in both the light and dark system styles. */
+#panel .panel-button,
+#panel .panel-button:hover,
+#panel .panel-button:focus,
+#panel .panel-button:active,
+#panel .panel-button:checked,
+#panel .panel-button StLabel,
+#panel .panel-button StIcon,
+#panel .panel-button .clock {
+  color: #101010 !important;
+  text-shadow: none !important;
+  icon-shadow: none !important;
+}
+
+/* Preserve the compact layout previously supplied by Kiwi Panel Styling. */
+#panel {
+  font-weight: 500;
+}
+
+#panel .panel-button {
+  -natural-hpadding: 8px;
+  -minimum-hpadding: 4px;
+}
+
+#panel .panel-button .popup-menu-arrow {
+  width: 0;
+  height: 0;
+}
+
+#panel .panel-button .system-status-icon {
+  icon-size: 16px;
+  padding: 4px;
+  margin: 0;
+}
+
+#panel .panel-button .panel-status-menu-box StLabel {
+  padding-left: 2px;
+}
+
+#panel .panel-button .appindicator-trayicons-box {
+  margin: 0 4px;
+}
+
+#panel .panel-button .app-menu-icon {
+  padding: 0 4px;
+}
+
+#panel Gjs_ui_panel_QuickSettings.panel-button .system-status-icon {
+  margin: 0 2px;
+}
+
+#panel Gjs_ui_dateMenu_DateMenuButton.panel-button {
+  -natural-hpadding: 0px;
+  -minimum-hpadding: 0px;
+}
+
+#panel Gjs_ui_dateMenu_DateMenuButton StLabel {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:focus,
+#panel .panel-button.clock-display:hover .clock,
+#panel .panel-button.clock-display:focus .clock {
+  box-shadow: inset 0 0 0 100px rgba(30, 40, 60, 0.10) !important;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked,
+#panel .panel-button.clock-display:active .clock,
+#panel .panel-button.clock-display:checked .clock {
+  box-shadow: inset 0 0 0 100px rgba(30, 40, 60, 0.18) !important;
+}
+
+/* The clock has an inner highlight; avoid drawing a second pill around it. */
+#panel .panel-button.clock-display {
+  box-shadow: none !important;
+}
+
+#panel .panel-button#panelActivities .workspace-dot {
+  background-color: #101010 !important;
+}
+
+/* Kiwi draws EN as a solid badge, with an inverse glyph inside it. */
+#panel .kiwi-input-en StLabel {
+  color: #ffffff !important;
+  background-color: #101010 !important;
+}
+
+/* Keep the Shell's white-on-red recording/sharing indicators recognizable. */
+#panel .panel-button.screen-recording-indicator,
+#panel .panel-button.screen-sharing-indicator,
+#panel .panel-button.screen-recording-indicator StIcon,
+#panel .panel-button.screen-sharing-indicator StIcon {
+  color: #ffffff !important;
+}

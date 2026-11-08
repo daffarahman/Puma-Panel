@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8192" height="32" viewBox="0 0 8192 32">
+  <defs>
+    <pattern id="stripes" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path fill="#fcfcfd" d="M0 0h4v2H0z"/>
+      <path fill="#e7e9ec" d="M0 2h4v1H0z"/>
+      <path fill="#f4f5f6" d="M0 3h4v1H0z"/>
+    </pattern>
+    <!-- The shading is part of the surface and ends at the panel's edge. -->
+    <linearGradient id="lower-bevel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset=".68" stop-color="#000000" stop-opacity="0"/>
+      <stop offset=".82" stop-color="#000000" stop-opacity=".06"/>
+      <stop offset=".91" stop-color="#000000" stop-opacity=".22"/>
+      <stop offset=".97" stop-color="#000000" stop-opacity=".60"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="8192" height="32" fill="url(#stripes)"/>
+  <rect width="8192" height="32" fill="url(#lower-bevel)"/>
+</svg>
